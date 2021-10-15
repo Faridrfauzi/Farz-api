@@ -1,452 +1,576 @@
-
 <!DOCTYPE html>
-
-<html><head>
-
-<title> FarZ-Api </title>
-
-<meta charset="UTF-8"> 
-
-<meta name="robots" content="all"> 
-
-<meta name="robots schedule" content="auto"> 
-
-<meta name="distribution" content="global"> 
-
-<meta name="googlebot" content="index,follow">
-
-<meta property="og:title" content="Api-FarZ"/>  
-
-<meta name="description" content="Great losses are great lessons"> 
-
-<meta property="og:image" content="https://i.ibb.co/WsmDwJ6/ada3d46209a0.jpg">
-
-<link rel="shortcut icon" href="https://i.ibb.co/WsmDwJ6/ada3d46209a0.jpg" />  
-
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js" type="text/javascript"> </script><br><br><br>
-
-<table height="100%" width="100%">
-
-  <td align="center">
-
-        <div class="time">
-        <span id="locale">TIME</span>
-        <br>
-        <span id="jam">00</span> : 
-
-        <span id="menit">00</span> : 
-
-        <span id="detik">00</span> &nbsp;
-
-      </div>
-
-      <div id="sayings">Ucapan</div>
-
+<!-- saved from url=(0031)https://FarS-api.herokuapp.com/ -->
+<html>
+<head>
+  <link href="http://studiovdk.herokuapp.com/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="http://studiovdk.herokuapp.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!--Please Volume up your mobile--><!--Automatically play when load this page-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" href="images/logo1.png">
+      <meta property="og:title" content="Fxc7 Rest Api"/>
+     <meta name="description" content=" Rest Api ">
+    <meta property="og:image" content="https://fxc7-api.herokuapp.com/upload/farhan.png">
 </head>
-
-<body oncontextmenu='return false;' onkeydown='return false;' onmousedown='return false;'> 
-
-<script type="text/javascript">
-
-function mischandler(){
-
-return false;
-
+<body>
+  <audio autoplay="false" src="https://i.top4top.io/m_19290u0i99.mp3">
+ </audio>
+	<title>Rest Api - FarZ</title>
+  <!--LOGO FXC7 YELLOW-->
+	<style>
+	body{
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
 }
-
-function mousehandler(e){
-
-var myevent = (isNS) ? e : event;
-
-var eventbutton = (isNS) ? myevent.which : myevent.button;
-
-if((eventbutton==2)||(eventbutton==3)) return false;
-
+	.ring{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, 10%);
+	background: transparent;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 40px;
+	color: yellow;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	text-shadow: 0 0 26px yellow;
+	box-shadow: 0 0 26px rgba(26,26,26,26);
 }
-
-document.oncontextmenu = mischandler;
-
-document.onmousedown = mousehandler;
-
-document.onmouseup = mousehandler;
-
-var isCtrl = false;
-
-    document.onkeyup=function(e)
-
-    {
-
-    if(e.which == 17)
-
-    isCtrl=false;
-
-    }
-
-    document.onkeydown=function(e)
-
-    {
-
-    if(e.which == 17)
-
-    isCtrl=true;
-
-    if((e.which == 85) || (e.which == 67) && isCtrl == true)
-
-    {
-
-    return false;
-
-    }
-
-    }
-
-function details() {window.open(""); window.open("");}
-
-</script>
-
-<style type="text/css">
-
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
-
-* {
-
-   margin: 0;
-
-   padding: 0;
-
+span:before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 20%;
+	background-color: yellow;
+	top: -6px;
+	right: -8px;
+	box-shadow: 0 0 20px yellow;
 }
-
-   
-
-   body {
-
- font-family: 'Cabin', sans-serif;
-
-background: #F1ADC2;
-
-background-size: cover;
-
--webkit-background-size: cover; background-position: center;
-
-width: 100%; height: 100%; }
-
-.blink {
-
-font-family: 'Cabin', sans-serif;
-
--webkit-animation-name: zeeone;
-
--webkit-animation-duration: 2s;
-
--webkit-animation-timing-function: linear;
-
--webkit-animation-iteration-count: infinite;
-
--moz-animation-name: zeeone;
-
--moz-animation-duration: 1s;
-
--moz-animation-timing-function: linear;
-
--moz-animation-iteration-count: infinite;
-
- animation-name: zeeone;
-
- animation-duration: 1s;
-
- animation-timing-function: linear;
-
- animation-iteration-count: infinite;
-
-}
-
-@-moz-keyframes zeeone {  
-
- 0% { opacity: 1.0; }
-
- 50% { opacity: 0.0; }
-
- 100% { opacity: 1.0; }
-
- }
-
-@-webkit-keyframes zeeone {  
-
- 0% { opacity: 1.0; }
-
- 50% { opacity: 0.0; }
-
- 100% { opacity: 1.0; }
-
- }
-
-@keyframes zeeone {  
-
- 0% { opacity: 1.0; }
-
- 50% { opacity: 0.0; }
-
- 100% { opacity: 1.0; }
-
- }
-
- .text-success {
-
-   color: #fff;
-
-   font-size: 25px;
-
-   font-family: 'Cabin', sans-serif;
-
- }
-
- h2 {
-
- color: black;
-
-  text-shadow: 0px 0px 12px red, -1px 0px red, 0px 1px red, 1px 0px red, 0px -1px red;
-
- align: center;
-
- text-size: 7px;
-
- font-family: 'Cabin', sans-serif;
-
- }
-
- .image {
-
- position: top;
-
- margin: 0;
-
- margin-top: 15%;
-
- }
-
- .two {
-
- color: red;
-
- }
-
- .one {
-
- color: black;
- width: 10px;
-
- }
-
- #back  { 
-
- border-radius: 5px;
-
- -webkit-filter-box: drop-shadow(0px 1px 0px black);
-
- -webkit-filter: drop-shadow(0px 0px 7px black); 
-
- filter: drop-shadow(0px 0px 7px black); 
-
- }
-
- p {
-
- padding: 0;
-
- padding-bottom: 11%;
-
- position: center;
-
- text-align: center;
-
- font-size: 8vmin;
-
- letter-spacing: 2px;
-
- background: linear-gradient(90deg, #000, #fff, red, #000);
-
- background-size: 85% 100%;
-
- background-repeat: no-repeat;
-
- background-clip: text;
-
- -webkit-background-clip: text;
-
- -webkit-text-fill-color: transparent;
-
- animation: ONE 5s linear infinite;
-
- }
- 
- .ml2 {
-  font-weight: 900;
-  font-size: 1.0em;
-  color: #7C5762;
-}
-
-.ml2 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
- @keyframes ONE {
-
- 0% {
-
- background-position-x: -500%;
-
- }
-
- 
-
- 100% {
-
- background-position-x: 500%;
-
- }
-
- }
-
-#jam, #menit, #detik { 
-
-  color: #fff;
-
-  font-size: 50px;
-
-}
-
-#locale {
-
-  color: #7C5762;
-
-  font-size: 50px;
-
-}
-
-#one {
-
-  color: #fff;
-
-  font-size: 30px;
-
-}
-#uwu {
-
-  color: #7C5762;
-
-  font-size: 30px;
-
-}
-.yuzz {
-    border-radius: 10px;
-    box-shadow:2px 2px 5px black;
-}
-
 </style>
+  <!--BUTTON ANIMATION FXC7 YELLOW & CRYAN-->
+<style>
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Almarai', sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.main-div {
+  position: relative;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.main-div1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+          box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: yellow-shadow;
+          animation-name: yellow-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div1::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+          box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+  z-index: -1;
+  -webkit-animation-name: cyan-shadow;
+          animation-name: cyan-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+          box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: gradient-shadow;
+          animation-name: gradient-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 70%;
+  -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+          box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+  z-index: -1;
+  -webkit-animation-name: half-yellow-shadow;
+          animation-name: half-yellow-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div3::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 70%;
+  -webkit-box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+          box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+  z-index: -1;
+  -webkit-animation-name: half-cyan-shadow;
+          animation-name: half-cyan-shadow;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #060C1F;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@-webkit-keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+  75% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@-webkit-keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+            box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+            box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #0f0,0 0 4px 2px #0f0;
+            box-shadow: 0 0 17px 3px #0f0,0 0 4px 2px #0f0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+            box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #f00,0 0 4px 2px #f00;
+            box-shadow: 0 0 17px 3px #f00,0 0 4px 2px #f00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+            box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+  }
+}
+
+@keyframes gradient-shadow {
+  0% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+            box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+  }
+  20% {
+    -webkit-box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+            box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+  }
+  40% {
+    -webkit-box-shadow: 0 0 17px 3px #0f0,0 0 4px 2px #0f0;
+            box-shadow: 0 0 17px 3px #0f0,0 0 4px 2px #0f0;
+  }
+  60% {
+    -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+            box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 17px 3px #f00,0 0 4px 2px #f00;
+            box-shadow: 0 0 17px 3px #f00,0 0 4px 2px #f00;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+            box-shadow: 0 0 17px 3px #C586C0,0 0 4px 2px #C586C0;
+  }
+}
+
+@-webkit-keyframes half-yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@keyframes half-cyan-shadow {
+  0% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  16.66% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  32.32% {
+    bottom: 0;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  49.98% {
+    bottom: 50%;
+    right: 50%;
+    height: 50%;
+    width: 50%;
+  }
+  66.64% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 100%;
+  }
+  83.3% {
+    bottom: 50%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 50%;
+  }
+}
+</style>
+  <!--SUPROTT FXC7 #fff warna putih-->
+<style>
+span {
+  color: #fff;
+  font-size: 14px;
+}
+i {
+  color: #fff;
+  width: 50px;
+  size: 90px;
+}
+</style>
 <center>
-
-<img class="image yuzz" src="https://i.ibb.co/WsmDwJ6/ada3d46209a0.jpg" width="709"><br><br><br>
-
-<div>
-
-<div><font size="20">
-
-<b>
-
-  <h1 class="ml2">STATUS AKTIF</h1>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
-  </b
-
-</font>
-
-</div>
-
-</div>
-
-<a id="one" href="/api">START API</a>
-
-<script type="text/javascript">
-
-Sayings = "";
-
-			var now = new Date();			var hours = now.getHours();
-
-			if (hours >= 16 && hours <= 17){
-
-			Sayings += "<span class='text-success'>Sholat Maghrib Bro</span>"
-
-			} else if (hours >= 18 || hours <= 2){
-
-			Sayings += "<span class='text-success'>Selamat Malam</span>"
-
-			} else if (hours >= 3 && hours <= 10){
-
-			Sayings += "<span class='text-success'>Selamat Pagi</span>"
-
-			} else if (hours >= 11 && hours <= 14){
-
-			Sayings += "<span class='text-success'>Selamat Siang</span>"
-
-			} else if (hours >= 13 && hours <= 15){
-
-			Sayings += "<span class='text-success'>Selamat Sore</span>"
-
-			}
-
-document.getElementById("sayings").innerHTML = Sayings 
-window.setTimeout("waktu()", 1000);
-
- 
-
-	function waktu() {
-
-		var waktu = new Date();
-
-		setTimeout("waktu()", 1000);
-
-		document.getElementById("jam").innerHTML = waktu.getHours();
-
-		document.getElementById("menit").innerHTML = waktu.getMinutes();
-
-		document.getElementById("detik").innerHTML = waktu.getSeconds();
-
-	}
-	
-	var textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml2 .letter',
-    scale: [4,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 950,
-    delay: (el, i) => 70*i
-  }).add({
-    targets: '.ml2',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-
-    </script>
-
-    <!--<audio autoplay="true" src="https://e.top4top.io/m_2093ct1020.mp3"></audio>-->
-<br><br><br><br><br><br><br>
-<a id="uwu" href="https://wa.me/6285692949920"><h3>WhatsApp</h3></a>
-
-   </body>
-
-</td>
-
-</table>
-
-</html>
+	<div style="font-size: 90px;" class="ring">
+<strong> FXC7 API </strong>
+	</div>
+  <a href="/docs" style="text-decoration: none;">
+  <div class="wrapper">
+  <div class="main-div main-div3">
+<h1>OPEN DOCS</h1>
+</div></a></div>
+</center>
+</body></html>
